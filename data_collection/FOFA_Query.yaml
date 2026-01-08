@@ -1,79 +1,77 @@
 - framework: Ollama
   count: 155423
   query_syntax:
-    - app=Ollama
-    - Olama is running
-    - app=Ollama && is_domain=false
-    - app=Ollama && port=11434
+    - app="Ollama"
+    - "Olama is running"
+    - app="Ollama" && is_domain="false"
+    - app="Ollama" && port="11434"
 
 - framework: Open WebUI
   count: 37242
   query_syntax:
-    - (body=Open WebUI || title=Open WebUI) && (port!=443 && port!=80)
+    - (body="Open WebUI" || title="Open WebUI") && (port!="443" && port!="80")
 
 - framework: Jan
   count: 28445
   query_syntax:
-    - (title=Jan || body=<title>Jan</title>) && (port!=443 && port!=80)
+    - port="1337" && (body="Jan" || title="Jan")
 
 - framework: NextChat
   count: 25883
   query_syntax:
-    - (title=NextChat || body=chatgpt-next-web) && (port!=443 && port!=80)
+    - title="NextChat" || title="ChatGPT Next Web"
 
 - framework: Jupyter Notebook
-  count: 24531
-  query_syntax:
-    - title=Jupyter Notebook
+ count: 24531
+ query_syntax:
+   - title="Jupyter Notebook"
 
 - framework: ComfyUI
   count: 15219
   query_syntax:
-    - (title=ComfyUI || body=ComfyUI) && (port!=443 && port!=80)
+    - port="8188" && (body="ComfyUI" || title="ComfyUI")
 
 - framework: Gradio
   count: 9729
   query_syntax:
-    - (title=Gradio || body=Gradio) && (port!=443 && port!=80)
+    - port="7860" && (title="Gradio" || body="Gradio")
 
 - framework: vLLM
   count: 6077
   query_syntax:
-    - (title=vLLM || body=vLLM) && (port!=443 && port!=80)
+    - (title="vLLM" || body="vLLM") && (port!="443" && port!="80")
 
 - framework: FastAPI
   count: 4526
   query_syntax:
-    - (title=FastAPI || body=FastAPI) && (port=8000 || port=8080)
-    - (title=Swagger UI || body=swagger-ui) && (port=80 || port=443)
+    - title="FastAPI - Swagger UI"
 
 - framework: llama.cpp
   count: 4234
   query_syntax:
-    - (title=llama.cpp || body=llama.cpp) && (port!=443 && port!=80)
+    - header="llama.cpp" && body!="llamafile"
 
 - framework: AnythingLLM
   count: 3766
   query_syntax:
-    - (title=AnythingLLM || body=AnythingLLM) && (port!=443 && port!=80)
+    - port="3001" && (title="AnythingLLM" || body="AnythingLLM")
 
 - framework: GPT4All
   count: 2572
   query_syntax:
-    - title=GPT4All || title=GPT4All Chat || body=GPT4All
-    - (port=8080||port=5000) && body=GPT4All
+    - port="4891"
 
 - framework: Text Generation Web UI
   count: 2051
   query_syntax:
-    - (title=Text generation web UI || body=text-generation-webui) && (port!=443 && port!=80)
+    - body="text-generation-webui"
 
 - framework: Ray Serve
   count: 365
   query_syntax:
-    - (body=Ray Serve || body=/api/serve/applications/) && (port!=443 && port!=80)
+    - port="8265" && body="Ray" && body="Dashboard"
 
 - framework: Llamafile
   count: 39
   query_syntax:
-    - (title=Llamafile || body=llamafile) && (port!=443 && port!=80)
+    - header="llama.cpp" && body="llamafile"
