@@ -24,7 +24,7 @@
 - framework: Jupyter Notebook
  count: 24531
  query_syntax:
-   - title=Jupyter Notebook
+   - title="Jupyter Notebook"
 
 - framework: ComfyUI
   count: 15219
