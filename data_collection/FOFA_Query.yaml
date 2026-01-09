@@ -3,13 +3,13 @@
   query_syntax:
     - app="Ollama"
     - "Olama is running"
-    - app="Ollama" && is_domain="false"
+    - app="Ollama" && is_domain=false
     - app="Ollama" && port="11434"
 
 - framework: Open WebUI
   count: 37242
   query_syntax:
-    - (body="Open WebUI" || title="Open WebUI") && (port!="443" && port!="80")
+    - title="Open WebUI" && (port="3000"||port="8080")
 
 - framework: Jan
   count: 28445
@@ -24,7 +24,7 @@
 - framework: Jupyter Notebook
  count: 24531
  query_syntax:
-   - title="Jupyter Notebook"
+   - title=Jupyter Notebook
 
 - framework: ComfyUI
   count: 15219
@@ -39,7 +39,7 @@
 - framework: vLLM
   count: 6077
   query_syntax:
-    - (title="vLLM" || body="vLLM") && (port!="443" && port!="80")
+    - (title="vLLM" || body="vLLM") && (port="5000"|| port="8000" )
 
 - framework: FastAPI
   count: 4526
@@ -49,7 +49,7 @@
 - framework: llama.cpp
   count: 4234
   query_syntax:
-    - header="llama.cpp" && body!="llamafile"
+    - header="llama.cpp" && body !="llamafile"
 
 - framework: AnythingLLM
   count: 3766
@@ -59,7 +59,7 @@
 - framework: GPT4All
   count: 2572
   query_syntax:
-    - port="4891"
+    - (port="8080"||port="5000"||port="5001"||port="8000") && body="GPT4All"
 
 - framework: Text Generation Web UI
   count: 2051
