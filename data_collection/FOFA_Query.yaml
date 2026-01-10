@@ -11,20 +11,10 @@
   query_syntax:
     - title="Open WebUI" && (port="3000"||port="8080")
 
-- framework: Jan
-  count: 28445
-  query_syntax:
-    - port="1337" && (body="Jan" || title="Jan")
-
 - framework: NextChat
   count: 25883
   query_syntax:
     - title="NextChat" || title="ChatGPT Next Web"
-
-- framework: Jupyter Notebook
- count: 24531
- query_syntax:
-   - title="Jupyter Notebook"
 
 - framework: ComfyUI
   count: 15219
